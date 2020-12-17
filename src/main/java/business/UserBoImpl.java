@@ -15,4 +15,11 @@ public class UserBoImpl implements UserBo {
 		return i;
 	}
 
+	public boolean logInUser(String email, String password) throws Exception {
+		
+		return dao.findBy(email, password);
+	}
+	
+	}
+
 	

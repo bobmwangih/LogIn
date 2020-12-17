@@ -2,6 +2,7 @@ package dao;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 
 import javax.sql.DataSource;
 
@@ -23,18 +24,23 @@ public class UserDaoImpl implements UserDao {
 		ps.setString(2, u.getEmail());
 		ps.setString(3, u.getPassword());
 		int i =ps.executeUpdate();
-		System.out.println(i);
 		cn.close();
 		
 		return i;
 	}
 
 	
-	public User findBy(String name) throws Exception {
+	public boolean findBy(String email,String password) throws Exception {
+		boolean registered;
 		Connection cn = ds.getConnection();
-		PreparedStatement ps1 = cn.prepareStatement("select * from user where email =? password=?");
-		ps1.setString();
-		return null;
+		PreparedStatement ps1 = cn.prepareStatement("select * from user where email =? and password=?");
+		ps1.setString(1,email);
+		ps1.setString(2,password);
+		ResultSet user = ps1.executeQuery();
+		cn.close();
+		 //String em = user.getString(1);
+		registered = user.next();
+		return registered;
 	}
 	
 	

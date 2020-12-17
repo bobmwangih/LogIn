@@ -7,11 +7,11 @@
 <title>Success</title>
 </head>
 <body>
-<h2>Good morning,successfully registered!</h2>
+<h1>Hello!</h1>
 <table>
 <tr><td>${nm}</td></tr>	
 	<tr><td>${em}</td></tr> 
 </table>
-
+<h3>Welcome</h3>
 </body>
 </html>

@@ -1,6 +1,6 @@
 <html>
 <body>
-<h2>Login page</h2>
+<h2>Register/Login page</h2>
 <table>
 		<tr>
 			<td>
@@ -40,8 +40,8 @@
 				<form method="GET" action="login">
 					<table>
 						<tr>
-							<td>Name:</td>
-							<td><input type="text" name="name" /></td>
+							<td>Email:</td>
+							<td><input type="text" name="email" /></td>
 						</tr>
 
 						<tr>
